@@ -1,0 +1,44 @@
+{
+  "name": "template-json-lint",
+  "version": "0.1.0",
+  "description": "Validate JSON with unresolved template placeholders while preserving accurate error positions in the original source.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "json",
+    "json-validation",
+    "template",
+    "typescript",
+    "lint"
+  ],
+  "author": "Aditi Mishra",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.0.0",
+    "vitest": "^5.0.5"
+  },
+  "overrides": {
+    "esbuild": "0.28.2"
+  }
+}
